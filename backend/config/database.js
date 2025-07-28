@@ -7,4 +7,9 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USERNAME, pr
   dialect:  'postgres' 
 });
 
+sequelize.authenticate()
+.then(()=>{console.log("The db is conncted")})
+.catch((err)=>{console.log(err)})
+
+
 module.exports = sequelize;

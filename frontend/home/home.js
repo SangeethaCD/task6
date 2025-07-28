@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     fetch(`/user/${email}`, { method: "GET" })
       .then(res => {
-        if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+        if (!res.ok) throw new Error(`HTTP error status: ${res.status}`);
         return res.json();
       })
       .then(data => {
@@ -34,13 +34,13 @@ document.addEventListener("DOMContentLoaded", () => {
           const amountEl = card.querySelector(".amount");
           amountEl.textContent = formatRupees(acc.balance);
 
-          card.querySelector(".details-column.left p:nth-child(1)").innerHTML = `<strong>Account No:</strong> ${acc.account_no}`;
+          card.querySelector(".details-column.left p:nth-child(1)").textContent = `Account No: ${acc.account_no}`;
 
-          card.querySelector(".details-column.left p:nth-child(2)").innerHTML = `<strong>Branch:</strong> ${acc.branch}`;
+          card.querySelector(".details-column.left p:nth-child(2)").textContent = `Branch: ${acc.branch}`;
 
-          card.querySelector(".details-column.right p:nth-child(1)").innerHTML = `<strong>Name:</strong> ${acc.account_name}`;
+          card.querySelector(".details-column.right p:nth-child(1)").textContent = `Name: ${acc.account_name}`;
 
-          card.querySelector(".details-column.right p:nth-child(2)").innerHTML = `<strong>IFSC code:</strong> ${acc.IFSC}`;
+          card.querySelector(".details-column.right p:nth-child(2)").textContent = `IFSC code: ${acc.IFSC}`;
         });
       })
       .catch(err => {
@@ -72,7 +72,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Expand/Collapse account cards
   function setupCards() {
     const headers = document.querySelectorAll(".toggle-header");
 
@@ -102,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
           : card.classList.contains("current")
           ? "current"
           : card.classList.contains("credits")
-          ? "credit"
+          ? "credits"
           : null;
         if (type) {
           const amountText = type.balance|| "Rs.0.00";
