@@ -1,5 +1,5 @@
 # Banking App
-This app contains the basic curd operations for the banking.And the backend has been connected to the backend using the database postgresql
+This app contains the basic curd operations for the banking.And the backend has been connected to the frontend and  using the database postgresql i have stored the datas.
 ## Table of contents
 - Installation
 - Databaseschema
@@ -41,11 +41,13 @@ account_name,
 branch,
 IFSC,
 balance.
-
+```shell
 ### The apis created and  used in this task:
 "/signup"-This api is used for creating the user and for getting the user details.
 "/login"-This api is used for the user validation and for getting the login credentials.
 "/user/:email"-This api is used for fetching the account details according to the current user email.
+```
+```shell
 #### sample json
  "/signup"-
  {
@@ -69,10 +71,12 @@ balance.
     "IFSC":899007,
     "balance":89000.0
  }
-
+```
+```shell
 ### Dotenv credentials 
 #### create a .dotenv file and give these details to configure the database
 DB_USERNAME = The username of the database used.
 DB_PASSWORD=The password used for the database
 DB_HOST=The host .
 DB_NAME= the name of the database.
+```
