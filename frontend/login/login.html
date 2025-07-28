@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="/login/login.css"/>
+  <title> Crystal Delta</title>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="../images/1000082726.png" alt="crystal delta banking logo" />
+    </div>
+    <div class="header">
+      <h1>Welcome to <span>Crystal Delta</span> Banking</h1>
+    </div>
+    <div class="login-page">
+      <div class="login-card">
+        <form id="login-form">
+          <h2>Login to your account</h2>
+          <div class="input-container">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email"  />
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" />
+
+            <button type="submit" class="btn">Login</button>
+            <p id="error-message">the user does not exists please signup first</p>
+            <p>Dont have an account? please signup <a href="../signup/signup.html">signup</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="../login/login.js"> </script>
+</body>
+</html>
