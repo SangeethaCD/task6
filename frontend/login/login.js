@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const email = document.getElementById("email").value.trim();
         const password = document.getElementById("password").value.trim();
         const error_msg = document.getElementById("error-message");
+        localStorage.setItem('users',email);
         if (!email || !password) {
           throw new Error("Please provide all the required information");
         }

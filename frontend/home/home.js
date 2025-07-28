@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function setWelcomeMessage() {
     const welcomeMessage = document.getElementById("welcome-message");
-    const customerID = email || "User";
+    const customerID = "User";
     welcomeMessage.textContent = `Greetings ${customerID}!`;
   }
 
@@ -188,7 +188,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!logoutBtn) return;
 
     logoutBtn.addEventListener("click", () => {
-      localStorage.removeItem("email");
+      localStorage.removeItem("users");
       window.location.href = "../login/login.html";
     });
   }
@@ -207,24 +207,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initApp();
 
  
-  if (document.getElementById("login-form")) {
-    document.getElementById("login-form").addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      const customerID = document.getElementById("customerID").value.trim();
-      const password = document.getElementById("password").value;
-      const errorMessage = document.getElementById("error-message");
-
-      if (!customerID || !password) {
-        errorMessage.style.display = "block";
-        return;
-      } else {
-        errorMessage.style.display = "none";
-      }
-
-      localStorage.setItem("email", customerID);
-
-      window.location.href = "home.html";
-    });
-  }
+ 
 });
