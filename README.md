@@ -1,6 +1,5 @@
 # Banking App
-This app contains the basic curd operations for the banking.And the backend has been connected to the frontend and  using the database postgresql i have stored the datas.
-## Table of contents
+This application provides basic CRUD operations for a banking system. It connects a Node.js frontend with a PostgreSQL backend to store and manage data.
 - Installation
 - Databaseschema
 - Apiendpoints
